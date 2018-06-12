@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Geo Attendance</string>
+    <string name="com_auth0_client_id">cLu48VEG67Dmiv2vB9Y8OkUVYw2Cve2E</string>
+    <string name="com_auth0_domain">geoattendance.auth0.com</string>
+</resources>
