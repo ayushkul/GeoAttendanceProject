@@ -7,45 +7,50 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-public class MainActivity extends AppCompatActivity {
+import rkgit.com.geoattendance.modules.dashboard.DashboardActivity;
+import rkgit.com.geoattendance.utility.GeoPreference;
+
+public class SplashActivity extends AppCompatActivity {
     private Handler handler;
     private Runnable runnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
+        if (GeoPreference.getInstance() == null)
+            GeoPreference.init(getApplicationContext());
+        //getActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
                 View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-        if (getSupportActionBar() != null)
-            getSupportActionBar().hide();
-
-        if (GeoPreference.getInstance() == null)
-            GeoPreference.init(getApplicationContext());
-
         handler = new Handler();
         runnable = new Runnable() {
             @Override
             public void run() {
-                if (GeoPreference.getInstance().getAuthToken().length() > 0)
+                if (GeoPreference.getInstance().getAccessTokenAuth0().length() > 0) {
                     redirectToDash();
-                else
+                } else {
+
                     redirectToAuth();
+
+                }
             }
         };
-        handler.postDelayed(runnable, 3000);
+        handler.postDelayed(runnable, 2000);
     }
 
-    private void redirectToDash() {
-        Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+    private void redirectToAuth() {
+        GeoPreference.getInstance().setIpAddress("http://192.168.43.220:4000/");
+        Intent intent = new Intent(SplashActivity.this, AuthenticationActivity.class);
         startActivity(intent);
         finish();
     }
 
-    private void redirectToAuth() {
-        Intent intent = new Intent(MainActivity.this, AuthenticationActivity.class);
+    private void redirectToDash() {
+        GeoPreference.getInstance().setIpAddress("http://192.168.43.220:4000/");
+        Intent intent = new Intent(SplashActivity.this, DashboardActivity.class);
         startActivity(intent);
         finish();
     }

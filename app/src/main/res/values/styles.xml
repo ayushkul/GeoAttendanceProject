@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -6,6 +6,16 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyTheme" parent="Lock.Theme">
+        <item name="Auth0.HeaderLogo">@drawable/splash_image</item>
+        <item name="Auth0.PrimaryColor">@color/colorPrimary</item>
+        <item name="Auth0.DarkPrimaryColor">@color/colorPrimaryDark</item>
+        <item name="Auth0.HeaderBackground">@color/white</item>
+        <item name="Auth0.HeaderTitle">@string/header_title</item>
+        <item name="Auth0.HeaderTitleColor">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
     </style>
 
 </resources>

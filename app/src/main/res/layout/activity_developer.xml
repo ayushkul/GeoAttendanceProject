@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="rkgit.com.geoattendance.DeveloperActivity">
+<TextView
+    android:layout_centerHorizontal="true"
+    android:layout_above="@+id/ip_edit_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Enter IP Address with port"/>
+    <EditText
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/ip_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:textColor="@color/white"
+        android:text="Submit"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ip_submit_button"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ip_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"/>
+</RelativeLayout>

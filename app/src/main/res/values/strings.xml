@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">Geo Attendance</string>
     <string name="com_auth0_client_id">cLu48VEG67Dmiv2vB9Y8OkUVYw2Cve2E</string>
+    <string name="auth0_connection_name">Username-Password-Authentication</string>
+    <string name="name_key">name</string>
+    <string name="phone_number_key">phone</string>
+    <string name="name_hint">Name</string>
+    <string name="phone_number_hint">Mobile Number</string>
     <string name="com_auth0_domain">geoattendance.auth0.com</string>
+    <string name="header_title">Geo Attendance</string>
+    <string name="raj_kumar_goel_institute_of_technology">Raj Kumar Goel Institute of Technology</string>
+    <string name="mark_attendance">Mark Attendance</string>
+    <string name="employee_chat_room">Employee Chat Room</string>
+    <string name="view_your_attendance">View Your Attendance</string>
 </resources>
