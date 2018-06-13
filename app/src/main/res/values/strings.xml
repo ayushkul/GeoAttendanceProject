@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Geo Attendance</string>
-    <string name="com_auth0_client_id">cLu48VEG67Dmiv2vB9Y8OkUVYw2Cve2E</string>
+    <string name="com_auth0_client_id">#######################E</string>
     <string name="auth0_connection_name">Username-Password-Authentication</string>
     <string name="name_key">name</string>
     <string name="phone_number_key">phone</string>
